@@ -1,0 +1,38 @@
+{
+  "name": "imageresizer",
+  "productName": "ImageResizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "serve": "npx electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Pavlo",
+  "license": "ISC",
+  "build": {
+    "appId": "com.imageresizer.app",
+    "productName": "Image Resizer",
+    "asar": true,
+    "asarUnpack": "node_modules/puppeteer/.local-chromium/**/*",
+    "extraFiles": [
+      "credentials"
+    ],
+    "mac": {
+      "target": "dmg",
+      "category": "utility"
+    }
+  },
+  "devDependencies": {
+    "electron": "^20.2.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "puppeteer": "^19.2.2",
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}
